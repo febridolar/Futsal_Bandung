@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".Home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00330E0E"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/slideViewPager"
+        android:layout_marginBottom="46dp"
+        android:background="#000" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slideViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seperate" />
+
+    <View
+        android:id="@+id/seperate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:background="#000" />
+
+    <View
+        android:id="@+id/seperate1"
+        android:layout_width="400dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="320dp"
+        android:background="#9B9B9B" />
+
+    <View
+        android:id="@+id/seperate2"
+        android:layout_width="400dp"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="360dp"
+        android:background="#9B9B9B" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="330dp"
+        android:fontFamily="@font/amarante"
+        android:text="Selamat Datang di Aplikasi Futsal Bandung :D"
+        android:textColor="#00796B"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="399dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="390dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/amarante"
+        android:text="Di Aplikasi ini kamu bisa melihat informasi tentang tempat futsal yang ada di Bandung."
+        android:textAlignment="center"
+        android:textColor="#00796B"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_width="60dp"
+        android:layout_height="34dp"
+        android:layout_below="@+id/slideViewPager"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="-57dp"
+        android:orientation="horizontal" />
+
+
+</RelativeLayout>

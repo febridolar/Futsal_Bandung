@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".Sejarah">
+
+    <ImageView
+        android:id="@+id/back_sejarah"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_arrow_back_black_24dp"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sejarah Futsal"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/warna"
+        android:fontFamily="@font/amarante"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="5dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/judul"
+        android:background="@color/bg">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:background="@color/bg">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:scaleType="fitXY"
+            android:layout_height="fill_parent"
+            app:srcCompat="@drawable/sejarah" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:layout_margin="15dp"
+                android:textColor="#000"
+                android:textAlignment="gravity"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                android:text="Futsal dipopulerkan di Montevideo, Uruguay pada tahun 1930, oleh Juan Carlos Ceriani. Keunikan futsal mendapat perhatian di seluruh Amerika Selatan, terutamanya di Brasil. Ketrampilan yang dikembangkan dalam permainan ini dapat dilihat dalam gaya terkenal dunia yang diperlihatkan pemain-pemain Brasil di luar ruangan, pada lapangan berukuran biasa. Pele, bintang terkenal Brasil, contohnya, mengembangkan bakatnya di futsal. Sementara Brasil terus menjadi pusat futsal dunia, permainan ini sekarang dimainkan di bawah perlindungan Fédération Internationale de Football Association di seluruh dunia, dari Eropa hingga Amerika Tengah dan Amerika Utara serta Afrika, Asia, dan Oseania." />
+
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                app:srcCompat="@drawable/sejarah1" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:layout_margin="15dp"
+                android:textColor="#000"
+                android:textAlignment="gravity"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                android:text="Pertandingan internasional pertama diadakan pada tahun 1965, Paraguay menjuarai Piala Amerika Selatan pertama. Enam perebutan Piala Amerika Selatan berikutnya diselenggarakan hingga tahun 1979, dan semua gelaran juara disapu habis Brasil. Brasil meneruskan dominasinya dengan meraih Piala Pan Amerika pertama tahun 1980 dan memenangkannya lagi pada perebutan berikutnya tahun pd 1984.
+
+Kejuaraan Dunia Futsal pertama diadakan atas bantuan FIFUSA (sebelum anggota-anggotanya bergabung dengan FIFA pada tahun 1989) di Sao Paulo, Brasil, tahun 1982, berakhir dengan Brasil di posisi pertama. Brasil mengulangi kemenangannya di Kejuaraan Dunia kedua tahun 1985 di Spanyol, tetapi menderita kekalahan dari Paraguay dalam Kejuaraan Dunia ketiga tahun 1988 di Australia.
+
+Pertandingan futsal internasional pertama diadakan di AS pada Desember 1985, di Universitas Negeri Sonoma di Rohnert Park, California."
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

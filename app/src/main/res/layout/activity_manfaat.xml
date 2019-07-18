@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Manfaat">
+
+    <ImageView
+        android:id="@+id/back_manfaat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_arrow_back_black_24dp"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manfaat Bermain Futsal"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/warna"
+        android:fontFamily="@font/amarante"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="5dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/judul"
+        android:background="@color/bg">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:background="@color/bg">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                app:srcCompat="@drawable/manfaat" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:layout_margin="15dp"
+                android:textColor="#000"
+                android:textAlignment="gravity"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                android:text="Futsal adalah permainan bola yang dimainkan oleh dua regu, yang masingmasing beranggotakan lima orang. Tujuannya adalah memasukkan bola ke gawang lawan, dengan memanipulasi bola dengan kaki.
+
+Futsal memiliki peranan penting bagi perkembangan bakat pemain sepak bola. Contoh nyata seperti pesepak bola Brazil. Sebagian besar pemain top Brazil bermain futsal di masa kecilnya. Seperti Ronaldinho, Pele, Zico, Socrates, dan Bebeto. Berkat bermain futsal mereka bisa memiliki kelincahan, kecepatan dan intuisi yang sangat bagus dalam mengolah si kulit bundar di lapangan.
+
+Peraturannya sangat ketat, dimana pemain dilarang melakukan tackling dan sliding keras. Dengan begitu, pemain bisa tampil lepas tanpa berpikir risiko untuk dicederai lawan.Futsal adalah suatu jenis olahraga yang memiliki aturan tegas tentang kontak fisik. Sliding tackle (menjegal dari belakang), body charge (benturan badan), dan aspek kekerasan lain seperti dalam permainan sepak bola tidak diizinkan dalam futsal.
+
+Kekerasan yang sering mewarnai dalam permainan sepak bola selama ini jarang ditemukan dalam futsal. Ini menjadi satu alasan mengapa futsal ini digemari banyak orang, terutama bagi kaum ibu  tidak perlu lagi mencemaskan dan khawatir adanya cedera dan perkelahian terhadap anak-anaknya.
+
+" />
+
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                app:srcCompat="@drawable/manfaat1" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:layout_margin="15dp"
+                android:textColor="#000"
+                android:textAlignment="gravity"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                android:text="Ada 3 faktor yang dapat membantu pemain mengembangkan kemampuan teknik dan taktik bermain bola dengan baik yaitu :"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:layout_margin="15dp"
+                android:textColor="#000"
+                android:textAlignment="gravity"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                android:text="1. Inteligensi :
+Futsal merupakan suatu permainan yang mengalir begitu saja tanpa adanya persiapan khusus. Artinya, seorang pemain harus melakukan improvisasi untuk menghadapi situasi yang bakal berubah dalam pertandingan. Futsal merupakan medium ideal untuk mengembangkan inteligensi sepak bola."/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:layout_margin="15dp"
+                android:textColor="#000"
+                android:textAlignment="gravity"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                android:text="2. Keahlian Teknik :
+Futsal lebih menekankan pada kemampuan (skill) dibanding dengan fisik. Penguasaan bola saat menerima dan mengoper serta perubahan gerakan tubuh akan sangat berguna saat bermain bola di luar lapangan. Pemain bisa lebih matang dalam melakukan penguasaan bola dibandingkan dengan sepak bola konvensional."/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:layout_margin="15dp"
+                android:textColor="#000"
+                android:textAlignment="gravity"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                android:text="3. Permainan Cepat :
+Dalam futsal, karena ruang gerak yang sempit, bola akan bergulir dengan cepat di antara kaki pemain. Ini akan membantu pemain untuk mengembangkan permainan cepat secara individu dan tim."/>
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

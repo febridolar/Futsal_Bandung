@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Aturan">
+
+    <ImageView
+        android:id="@+id/back_aturan"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_arrow_back_black_24dp"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peraturan Futsal"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@color/warna"
+        android:fontFamily="@font/amarante"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="5dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/judul"
+        android:background="@color/bg">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:background="@color/bg">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                app:srcCompat="@drawable/aturan" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:layout_margin="15dp"
+                android:textColor="#000"
+                android:textAlignment="gravity"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                android:text="Luas lapangan \n 1.Ukuran: panjang 25–43 m x lebar 15–25 m. \n 2.Garis batas: garis selebar 8 cm, yakni garis sentuh di sisi, garis gawang di ujung-ujung, dan garis melintang tengah lapangan; 3 m lingkaran tengah; tak ada tembok penghalang atau papan. \n 3.Daerah penalti: busur berukuran 6 m dari masing-masing tiang gawang. \n 4. Titik penalti: 6 m dari titik tengah garis gawang. \n 5.Titik penalti kedua: 10 m dari titik tengah garis gawang. \n 6.Gawang: tinggi 2 m x lebar 3 m."/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:layout_margin="15dp"
+                android:textColor="#000"
+                android:textAlignment="gravity"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                android:text="Bola : \n 1. Ukuran: 4. \n 2 .Keliling: 62–64 cm. \n 3. Berat: 0,4 - 0,44 kg. \n 4. Lambungan: 55–65 cm pada pantulan pertama. \n 5. Bahan: kulit atau bahan yang cocok lainnya (yaitu bahan tak berbahaya)"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:adjustViewBounds="true"
+                android:layout_margin="15dp"
+                android:textColor="#000"
+                android:textAlignment="gravity"
+                android:cropToPadding="false"
+                android:scaleType="fitXY"
+                android:layout_height="fill_parent"
+                android:text="Jumlah pemain (per team) : \n 1. Jumlah pemain maksimal untuk memulai pertandingan: 5, salah satunya penjaga gawang. \n 2 .Jumlah pemain minimal untuk mengakhiri pertandingan: 2 (tidak termasuk cedera). \n 3. Jumlah pemain cadangan maksimal: 7. \n 4. Jumlah wasit: 2. \n 5. Metode pergantian: pergantian melayang (semua pemain kecuali penjaga gawang boleh memasuki dan meninggalkan lapangan kapan saja; pergantian penjaga gawang hanya dapat dilakukan jika bola tak sedang dimainkan dan dengan persetujuan wasit). \n 6. Batas jumlah pergantian pemain: tak terbatas. \n 7. Dan wasit pun tidak boleh menginjak arena lapangan, hanya boleh di luar garis lapangan saja, terkecuali jika ada pelanggaran-pelanggaran yang harus memasuki lapangan."/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

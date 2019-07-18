@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="5dp"
+    android:background="#FAF9F7">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:background="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/imagefutsal"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+
+        <TextView
+            android:id="@+id/nama_tempat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/warna"
+            android:fontFamily="@font/aclonica"
+            android:text="Nama"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/alamat_tempat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/idalamat"
+            android:textAlignment="gravity"
+            android:fontFamily="@font/buenard_bold"
+            android:text="..."
+            android:textColor="#302E2E"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/idalamat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/buenard_bold"
+            android:text="Alamat :"
+            android:layout_below="@+id/nama_tempat"
+            android:textAlignment="gravity"
+            android:textColor="#302E2E"
+            android:textSize="9dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

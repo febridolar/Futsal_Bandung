@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Tempat Futsal Populer di Bandung"
+        android:textColor="@color/warna"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle1"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:background="@color/bg"/>
+
+</RelativeLayout>
