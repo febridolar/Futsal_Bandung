@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment {
 
             mDotLayout.addView(mDots[i]);
 
-            }
+        }
 
 
 
