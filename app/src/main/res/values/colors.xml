@@ -6,6 +6,6 @@
     <color name="TransparentWhite">#DDD3D3</color>
     <color name="White">#ffffff</color>
     <color name="bg">#FCFAFA</color>
-    <color name="indicator">#AF1717</color>
     <color name="warna">#00796B</color>
+    <color name="indicator">#AF1717</color>
 </resources>

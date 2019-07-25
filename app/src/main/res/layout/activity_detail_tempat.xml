@@ -7,102 +7,12 @@
     android:orientation="horizontal"
     tools:context=".DetailTempat">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="57dp"
-        android:background="@color/bg">
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_margin="5dp"
-            android:background="@color/bg"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:adjustViewBounds="true"
-                android:cropToPadding="false"
-                app:srcCompat="@drawable/greenfutsal" />
-
-            <TextView
-                android:id="@+id/alamat"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_margin="15dp"
-                android:adjustViewBounds="true"
-                android:cropToPadding="false"
-                android:scaleType="fitXY"
-                android:text="Alamat : \n \nParahyangan Plaza, Lantai 5, JL Dalem Kaum, No. 54, Balonggede, Regol, Balonggede, Kec. Regol, Kota Bandung, Jawa Barat 40251"
-                android:textAlignment="gravity"
-                android:textColor="#000" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_margin="15dp"
-                android:adjustViewBounds="true"
-                android:cropToPadding="false"
-                android:scaleType="fitXY"
-                android:text="Buka Pukul : 7 Pagi - 11.30 Malam \nTelepon      : (022)4202027 \nWebsite      : https://www.plazaparahyangan.com/page/futsal \nFasilitas      : Scoring Board Digital, Shower, dan Locker Room"
-                android:textAlignment="gravity"
-                android:textColor="#000" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_margin="15dp"
-                android:adjustViewBounds="true"
-                android:cropToPadding="false"
-                android:scaleType="fitXY"
-                android:text="Buka Pukul : 7 Pagi - 11.30 Malam \nTelepon      : (022)4202027 \nWebsite      : https://www.plazaparahyangan.com/page/futsal \nFasilitas      : Scoring Board Digital, Shower, dan Locker Room"
-                android:textAlignment="gravity"
-                android:textColor="#000" />
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_margin="15dp"
-                android:adjustViewBounds="true"
-                android:cropToPadding="false"
-                android:scaleType="fitXY"
-                android:text="Buka Pukul : 7 Pagi - 11.30 Malam \nTelepon      : (022)4202027 \nWebsite      : https://www.plazaparahyangan.com/page/futsal \nFasilitas      : Scoring Board Digital, Shower, dan Locker Room"
-                android:textAlignment="gravity"
-                android:textColor="#000" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_margin="15dp"
-                android:adjustViewBounds="true"
-                android:cropToPadding="false"
-                android:scaleType="fitXY"
-                android:text="Gallery \n Berisi gallery foto-foto dengan recycleview"
-                android:textAlignment="gravity"
-                android:textColor="#000" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_margin="15dp"
-                android:adjustViewBounds="true"
-                android:cropToPadding="false"
-                android:scaleType="fitXY"
-                android:text="Maps"
-                android:textAlignment="gravity"
-                android:textColor="#000" />
-
-                <fragment
-                android:id="@+id/map"
-                android:name="com.google.android.gms.maps.SupportMapFragment"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_marginBottom="20dp"/>
-
-
-        </LinearLayout>
-    </ScrollView>
-
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_margin="15dp" />
 
 </RelativeLayout>
