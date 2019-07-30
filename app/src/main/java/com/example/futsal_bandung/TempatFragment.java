@@ -1,6 +1,8 @@
 package com.example.futsal_bandung;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -11,9 +13,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -27,48 +36,27 @@ import com.squareup.picasso.Picasso;
 
 public class TempatFragment extends Fragment {
 
+    private Toolbar toolbar;
     private RecyclerView recyclerView;
     private DatabaseReference mDatabase;
+    private TextView nama_tempat;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
       View view = inflater.inflate(R.layout.fragment_tempat, container, false);
+      setHasOptionsMenu(true);
+
 
         mDatabase= FirebaseDatabase.getInstance().getReference().child("tempat");
         mDatabase.keepSynced(true);
-
         recyclerView= view.findViewById(R.id.recycle);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
-
-
         return view;
     }
-
-    private void searchQuery(String searchText){
-        Query firebaseSearchQuery = mDatabase.orderByChild("nama_tempat").startAt(searchText).endAt(searchText + "\uf8ff");
-
-        FirebaseRecyclerAdapter<Post, PostViewHolder> firebaseRecyclerAdapter =
-                new FirebaseRecyclerAdapter<Post, PostViewHolder>(
-                        Post.class,
-                        R.layout.item_recycle,
-                        PostViewHolder.class,
-                        firebaseSearchQuery
-                ) {
-                    @Override
-                    protected void populateViewHolder(PostViewHolder postViewHolder, Post model, int i) {
-                        postViewHolder.setNama(model.getNama_tempat());
-                        postViewHolder.setAlamat(model.getAlamat());
-                        postViewHolder.setImage(getActivity().getApplicationContext(), model.getFoto_url());
-                    }
-                };
-
-        recyclerView.setAdapter(firebaseRecyclerAdapter);
-
-    }
-
 
 
     @Override
@@ -77,10 +65,22 @@ public class TempatFragment extends Fragment {
         final FirebaseRecyclerAdapter<Post, PostViewHolder>firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Post, PostViewHolder>
                 (Post.class, R.layout.item_recycle, PostViewHolder.class, mDatabase) {
             @Override
-            protected void populateViewHolder(PostViewHolder postViewHolder, Post model, int i) {
+            protected void populateViewHolder(final PostViewHolder postViewHolder, final Post model, final int i) {
                 postViewHolder.setNama(model.getNama_tempat());
                 postViewHolder.setAlamat(model.getAlamat());
                 postViewHolder.setImage(getActivity().getApplicationContext(), model.getFoto_url());
+
+                postViewHolder.card_view.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Toast.makeText(getContext(), model.getNama_tempat(), i).show();
+                        Intent intent = new Intent(getContext(), DetailTempat.class);
+                        intent.putExtra("nama_tempat",model.getNama_tempat());
+                        startActivity(intent);
+
+                    }
+                });
 
             }
 
@@ -89,15 +89,15 @@ public class TempatFragment extends Fragment {
         recyclerView.setAdapter(firebaseRecyclerAdapter);
     }
 
+
     public static class PostViewHolder extends RecyclerView.ViewHolder
     {
-        View mview;
-
-
-
-        public PostViewHolder(View itemView){
+        View mview, card_view;
+        public PostViewHolder(final View itemView){
             super(itemView);
+            card_view = itemView.findViewById(R.id.parentLayout);
             mview = itemView;
+
         }
 
         public void setNama(String nama_tempat) {
@@ -113,36 +113,7 @@ public class TempatFragment extends Fragment {
             ImageView imageView =(ImageView) mview.findViewById(R.id.imagefutsal);
             Picasso.with(ctx).load(foto_url).into(imageView);
         }
-    }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.search_menu, menu);
-        final MenuItem searchItem = menu.findItem(R.id.action_search);
-        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                searchQuery(query);
-                return false;
-            }
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                searchQuery(newText);
-                return false;
-            }
-        });
-        super.onCreateOptionsMenu(menu, inflater);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id ==  R.id.action_setting) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
 }

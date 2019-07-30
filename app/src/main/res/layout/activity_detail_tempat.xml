@@ -8,11 +8,118 @@
     tools:context=".DetailTempat">
 
 
+    <TextView
+        android:id="@+id/nama_tempat_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/buenard_bold"
+        android:text="Nama Tempat"
+        android:textColor="@color/warna"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/foto_detail"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:adjustViewBounds="true"
+        android:layout_below="@id/nama_tempat_detail"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/greenfutsal"/>
+
+    <TextView
+        android:id="@+id/alamat_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="17dp"
+        android:text="Alamat : "
+        android:layout_below="@+id/foto_detail"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/alamat_detail"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="17dp"
+        android:text="Parahyangan Plaza, Lantai 5, JL Dalem Kaum, No. 54, Balonggede, Regol, Balonggede, Kec. Regol, Kota Bandung, Jawa Barat 40251"
+        android:layout_below="@+id/alamat_text1"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/open_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="17dp"
+        android:layout_below="@id/alamat_detail"
+        android:text="Jam Operasi  :"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/telepon_text"
+        android:text="Telepon          :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="17dp"
+        android:layout_below="@id/open_text"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/tarif_text"
+        android:text="Tarif/Jam       :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="17dp"
+        android:layout_below="@id/telepon_text"
+        android:textColor="#000" />
+
+    <TextView
+        android:text="Fasilitas          :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="17dp"
+        android:layout_below="@id/tarif_text"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/text_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/map"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/buenard_bold"
+        android:text="Map"
+        android:textColor="@color/warna" />
+
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="300dp"
-        android:layout_height="250dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="150dp"
         android:layout_margin="15dp" />
+
+
+    <!-- Text Database -->
+
+    <TextView
+        android:id="@+id/jam_operasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="110dp"
+        android:layout_below="@id/alamat_detail"
+        android:text="09.00 - 22.00"
+        android:textColor="#000"/>
+
 
 </RelativeLayout>
