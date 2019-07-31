@@ -9,13 +9,13 @@
 
 
     <TextView
-        android:id="@+id/nama_tempat_detail"
+        android:id="@+id/namatempatdetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/buenard_bold"
-        android:text="Nama Tempat"
+        android:text="NamaTempat"
         android:textColor="@color/warna"
         android:textSize="18dp" />
 
@@ -26,7 +26,7 @@
         android:layout_width="350dp"
         android:layout_height="150dp"
         android:adjustViewBounds="true"
-        android:layout_below="@id/nama_tempat_detail"
+        android:layout_below="@id/namatempatdetail"
         android:cropToPadding="false"
         android:scaleType="fitXY"
         android:src="@drawable/greenfutsal"/>
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="17dp"
-        android:text="Parahyangan Plaza, Lantai 5, JL Dalem Kaum, No. 54, Balonggede, Regol, Balonggede, Kec. Regol, Kota Bandung, Jawa Barat 40251"
+        android:text="............................................."
         android:layout_below="@+id/alamat_text1"
         android:textColor="#000"/>
 
@@ -118,8 +118,39 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="110dp"
         android:layout_below="@id/alamat_detail"
-        android:text="09.00 - 22.00"
+        android:text="jam-operasi"
         android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/telepon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="110dp"
+        android:layout_below="@id/jam_operasi"
+        android:text="jam-operasi"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/tarif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="110dp"
+        android:layout_below="@id/telepon"
+        android:text="jam-operasi"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/fasilitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="110dp"
+        android:layout_below="@id/tarif"
+        android:text="jam-operasi"
+        android:textColor="#000"/>
+
 
 
 </RelativeLayout>

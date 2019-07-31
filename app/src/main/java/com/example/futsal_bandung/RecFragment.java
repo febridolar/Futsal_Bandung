@@ -1,12 +1,14 @@
 package com.example.futsal_bandung;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -45,11 +47,23 @@ public class RecFragment extends Fragment {
         FirebaseRecyclerAdapter<PostPopuler, PopulerViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<PostPopuler, PopulerViewHolder>
                 (PostPopuler.class, R.layout.populer_recycle, RecFragment.PopulerViewHolder.class, mDatabase) {
             @Override
-            protected void populateViewHolder(PopulerViewHolder populerViewHolder, PostPopuler postPopuler, int i) {
+            protected void populateViewHolder(final PopulerViewHolder populerViewHolder, final PostPopuler postPopuler,final int i) {
                 populerViewHolder.setNama(postPopuler.getNama());
                 populerViewHolder.setRating(postPopuler.getRating());
                 populerViewHolder.setAlamat(postPopuler.getAlamat());
                 populerViewHolder.setImage(getActivity().getApplicationContext(), postPopuler.getImg());
+
+                populerViewHolder.card_view.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Toast.makeText(getContext(), postPopuler.getNama(), i).show();
+                        Intent intent = new Intent(getContext(), DetailTempat.class);
+                        intent.putExtra("nama_tempat",postPopuler.getNama());
+                        startActivity(intent);
+
+                    }
+                });
             }
         };
 
@@ -58,10 +72,11 @@ public class RecFragment extends Fragment {
 
     public static class PopulerViewHolder extends RecyclerView.ViewHolder
     {
-        View mview;
+        View mview, card_view;
 
         public PopulerViewHolder(View itemView){
             super(itemView);
+            card_view = itemView.findViewById(R.id.parentLayoutPopuler);
             mview = itemView;
         }
 
