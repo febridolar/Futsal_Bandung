@@ -38,7 +38,7 @@ public class DetailTempat extends FragmentActivity implements OnMapReadyCallback
     private DatabaseReference mDatabase;
     private TextView mNamaTempat, mAlamat, mJamOperasi,mTelepon,mFasilitas,mTarif,urlImg;
     private ImageView Mimg;
-    String nm_tempat, userID;
+    private String nm_tempat, userID;
     private ImageView mFoto;
     private GoogleMap map;
     private View mapView;
@@ -49,12 +49,6 @@ public class DetailTempat extends FragmentActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_detail_tempat);
 
         getIntentExtra();
-
-
-        SupportMapFragment mapFragment =(SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-        mapView = mapFragment.getView();
 
         mAlamat = findViewById(R.id.alamat_detail);
         mJamOperasi = findViewById(R.id.jam_operasi);
@@ -67,9 +61,9 @@ public class DetailTempat extends FragmentActivity implements OnMapReadyCallback
         mFoto = findViewById(R.id.foto_detail);
 
 
-        userID = getIntent().getStringExtra("nama_tempat");
+        nm_tempat = getIntent().getStringExtra("nama_tempat");
 
-        mDatabase= FirebaseDatabase.getInstance().getReference().child("detail").child(userID);
+        mDatabase= FirebaseDatabase.getInstance().getReference().child("detail").child(nm_tempat);
 
         mDatabase.keepSynced(true);
 
@@ -93,7 +87,9 @@ public class DetailTempat extends FragmentActivity implements OnMapReadyCallback
                 urlImg.setText(img);
                 Picasso.with(getApplicationContext()).load(img).into(Mimg);
 
+
             }
+
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -101,7 +97,13 @@ public class DetailTempat extends FragmentActivity implements OnMapReadyCallback
             }
         });
 
+        SupportMapFragment mapFragment =(SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+        mapView = mapFragment.getView();
+
     }
+
 
     private void getIntentExtra(){
 
@@ -117,18 +119,38 @@ public class DetailTempat extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
-        float zoomLevel = 16.0f; //This goes up to 21
 
-        LatLng Mapme = new LatLng(-6.888710, 107.619857);
-        map.addMarker(new MarkerOptions().position(Mapme).title("Di Sekeloa\nSaya Kos"));
+        mDatabase= FirebaseDatabase.getInstance().getReference().child("detail").child(nm_tempat);
+        mDatabase.keepSynced(true);
 
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(Mapme, zoomLevel));
-        map.moveCamera(CameraUpdateFactory.newLatLng(Mapme));
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                Double lat =(Double) dataSnapshot.child("lat").getValue();
+                Double lng =(Double) dataSnapshot.child("long").getValue();
+
+                float zoomLevel = 16.0f; //This goes up to 21
+
+                LatLng Mapme = new LatLng(lat,lng);
+                map.addMarker(new MarkerOptions().position(Mapme).title(nm_tempat));
+
+                map.moveCamera(CameraUpdateFactory.newLatLngZoom(Mapme, zoomLevel));
+                map.moveCamera(CameraUpdateFactory.newLatLng(Mapme));
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(getApplicationContext(),databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
+
 
 }
