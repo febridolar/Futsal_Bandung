@@ -36,7 +36,7 @@ public class DetailTempat extends FragmentActivity implements OnMapReadyCallback
 
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
-    private TextView mNamaTempat, mAlamat, mJamOperasi,mTelepon,mFasilitas,mTarif;
+    private TextView mNamaTempat, mAlamat, mJamOperasi,mTelepon,mFasilitas,mTarif,urlImg;
     private ImageView Mimg;
     String nm_tempat, userID;
     private ImageView mFoto;
@@ -62,6 +62,7 @@ public class DetailTempat extends FragmentActivity implements OnMapReadyCallback
         mTarif = findViewById(R.id.tarif);
         mTelepon = findViewById(R.id.telepon);
         Mimg = findViewById(R.id.foto_detail);
+        urlImg = findViewById(R.id.url_gambar_detail);
 
         mFoto = findViewById(R.id.foto_detail);
 
@@ -89,6 +90,10 @@ public class DetailTempat extends FragmentActivity implements OnMapReadyCallback
                 mTarif.setText(tarif);
                 mTelepon.setText(telepon);
 
+                urlImg.setText(img);
+                Picasso.with(getApplicationContext()).load(img).into(Mimg);
+
+
 
             }
 
@@ -114,10 +119,7 @@ public class DetailTempat extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    public void setImage(Context ctx, String foto_url) {
-        ImageView img =(ImageView) findViewById(R.id.imagefutsal);
-        Picasso.with(ctx).load(foto_url).into(img);
-    }
+
 
     @Override
     public void onMapReady(GoogleMap googleMap) {

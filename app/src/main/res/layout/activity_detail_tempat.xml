@@ -151,6 +151,13 @@
         android:text="jam-operasi"
         android:textColor="#000"/>
 
+    <TextView
+        android:id="@+id/url_gambar_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=".."
+        android:visibility="invisible"/>
+
 
 
 </RelativeLayout>
