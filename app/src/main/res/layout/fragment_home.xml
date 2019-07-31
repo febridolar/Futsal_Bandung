@@ -23,8 +23,9 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/slideViewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/seperate" />
+        android:layout_height="306dp"
+        android:layout_above="@+id/seperate"
+        android:layout_marginBottom="60dp" />
 
     <View
         android:id="@+id/seperate"
@@ -37,14 +38,14 @@
         android:id="@+id/seperate1"
         android:layout_width="400dp"
         android:layout_height="0.5dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="280dp"
         android:background="#9B9B9B" />
 
     <View
         android:id="@+id/seperate2"
         android:layout_width="400dp"
         android:layout_height="0.5dp"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="330dp"
         android:background="#9B9B9B" />
 
     <TextView
@@ -52,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="295dp"
         android:fontFamily="@font/amarante"
         android:text="Selamat Datang di Aplikasi Futsal Bandung :D"
         android:textColor="#00796B"
@@ -62,7 +63,7 @@
         android:id="@+id/textView1"
         android:layout_width="399dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="350dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:fontFamily="@font/amarante"
@@ -77,7 +78,7 @@
         android:layout_height="34dp"
         android:layout_below="@+id/slideViewPager"
         android:layout_marginLeft="165dp"
-        android:layout_marginTop="-57dp"
+        android:layout_marginTop="-100dp"
         android:orientation="horizontal" />
 
 

@@ -6,21 +6,11 @@
     android:background="@color/bg">
 
 
-     <androidx.appcompat.widget.Toolbar
-         android:id="@+id/mToolbar"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         >
-
-
-
-     </androidx.appcompat.widget.Toolbar>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/mToolbar"
             android:layout_marginTop="10dp"
             android:background="@color/bg"
             android:scrollbars="vertical" />

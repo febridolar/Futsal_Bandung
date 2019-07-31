@@ -7,14 +7,22 @@
     android:orientation="horizontal"
     tools:context=".DetailTempat">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
     <TextView
         android:id="@+id/namatempatdetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/aladin"
+        android:fontFamily="@font/aclonica"
         android:text="NamaTempat"
         android:textColor="@color/warna"
         android:textSize="18dp" />
@@ -97,7 +105,7 @@
         android:layout_below="@+id/fasilitas"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/aladin"
+        android:fontFamily="@font/aclonica"
         android:text="Map"
         android:textColor="@color/warna" />
 
@@ -176,6 +184,9 @@
         android:text=".."
         android:visibility="invisible"/>
 
+        </RelativeLayout>
 
+    </LinearLayout>
 
 </RelativeLayout>
+
