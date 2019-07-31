@@ -93,8 +93,6 @@ public class DetailTempat extends FragmentActivity implements OnMapReadyCallback
                 urlImg.setText(img);
                 Picasso.with(getApplicationContext()).load(img).into(Mimg);
 
-
-
             }
 
             @Override
