@@ -1,4 +1,4 @@
-package com.example.futsal_bandung;
+package com.apps.futsal_bandung;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.futsal_bandung", appContext.getPackageName());
+        assertEquals("com.apps.futsal_bandung", appContext.getPackageName());
     }
 }

@@ -8,9 +8,38 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:844929625261:android:161568d9532e86fd",
+        "android_client_info": {
+          "package_name": "com.apps.futsal_bandung"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "844929625261-7ta2d4jqo8ubqfg5ipbns71gvulurfos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF2a8gjg53VpmoOOXs7rbH1prUxWLwLwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "844929625261-7ta2d4jqo8ubqfg5ipbns71gvulurfos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:844929625261:android:1553f8722f555a1b",
         "android_client_info": {
-          "package_name": "com.example.futsal_bandung"
+          "package_name": "com.apps.futsal_bandung"
         }
       },
       "oauth_client": [
@@ -39,7 +68,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:844929625261:android:a0f1e3b2247cb564",
         "android_client_info": {
-          "package_name": "com.example.futsalbandung"
+          "package_name": "com.apps.futsalbandung"
         }
       },
       "oauth_client": [
