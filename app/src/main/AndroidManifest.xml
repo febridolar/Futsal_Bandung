@@ -18,16 +18,22 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/map_key" />
 
-        <activity android:name=".DetailTempat">
+        <activity android:name=".DetailTempat" android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize">
 
         </activity>
-        <activity android:name=".Aturan" />
-        <activity android:name=".Manfaat" />
-        <activity android:name=".Sejarah" />
-        <activity android:name=".Home">
+        <activity android:name=".Aturan" android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".Manfaat" android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".Sejarah" android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity android:name=".Home" android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize">
 
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
